@@ -1,3 +1,25 @@
 api-version: v0.1
 metadata:
   name: my-app
+spec:
+    requiredPackages:
+        - kubectl
+        - helm
+    platforms:
+        - linux
+        - windows
+        - freebsd
+        - darwin
+    architecture:
+        - arm64
+        - amd64
+package_managers:
+  - name: apt
+    package_name: my-app-tools
+    executable: apt
+    parameters:
+      --nointeractive: true
+  - name: brew
+    package_name: my-app
+
+  
